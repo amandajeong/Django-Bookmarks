@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <h1> {{ page_title }}</h1>
+{% endblock %}
+
+{% block content %}
+
+    {% if user.username %}
+        <p>Hello, {{ user.username }}
+        You can save and share your bookmarks!
+        </p>
+    {% else %}
+        <p>
+        <a href="/login/">Login</a>
+        <a href="/register/">Create Account</a>
+        </p>
+    {% endif %}
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %} User Registration {% endblock %}
+
+{% block content %}
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div>
+            {{ field.label }}
+            {{ field }}
+            </div>
+        {% endfor %}
+
+        <input type="submit" value="Create User">
+    </form>
+
+    {{ form.errors }}
+
+{% endblock %}
