@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block head %}Bookmarks tagged with "{{ tag_name }}"{% endblock %}
+
+{% block content %}
+    {% include "bookmark_list.html" %}
+{% endblock %}
